@@ -992,12 +992,12 @@ footer { background:var(--dark2); border-top:1px solid rgba(201,168,76,0.1); pad
         <div class="checkout-block-title">Pago</div>
         <p style="font-size:11px;color:var(--gray);margin-bottom:20px;letter-spacing:1px">Todas las transacciones son seguras y están encriptadas.</p>
 
-        <button class="chk-pay-btn" id="chk-pay-btn" onclick="launchMercadoPago()">
-          Pagar con Mercado Pago — <span id="chk-total-label">$0</span>
+        <button class="chk-pay-btn" id="chk-pay-btn" onclick="launchEpayco()">
+          Pagar — <span id="chk-total-label">$0</span>
         </button>
         <p class="wompi-badge-text">
           <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Pagos procesados de forma segura por <strong>Mercado Pago</strong>
+          Pagos procesados de forma segura por <strong>ePayco</strong>
         </p>
       </div>
     </div>
@@ -3365,7 +3365,7 @@ function buyWithMercadoPago() {
 }
 
 // ── Launch Mercado Pago ──
-async function launchMercadoPago() {
+async function launchEpayco() {
   const sub = cartTotal();
   const disc = cartDiscount(sub);
   const grand = sub - disc;
@@ -3456,7 +3456,7 @@ async function launchMercadoPago() {
 
   // Redirigir a Mercado Pago
  const mp = document.createElement('a');
-  mp.href = 'https://link.mercadopago.com.co/kronex';
+  mp.href = 'https://secure.payco.co/checkoutopen/77fbb69c-d98d-4399-ac4c-eb5a717c6e56';
   mp.target = '_blank';
   mp.rel = 'noopener';
   document.body.appendChild(mp);
