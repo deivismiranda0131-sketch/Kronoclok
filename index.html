@@ -3455,9 +3455,13 @@ async function launchMercadoPago() {
   }
 
   // Redirigir a Mercado Pago
-  setTimeout(() => {
-    window.open('https://link.mercadopago.com.co/kronex', '_blank');
-  }, 900);
+ const mp = document.createElement('a');
+  mp.href = 'https://link.mercadopago.com.co/kronex';
+  mp.target = '_blank';
+  mp.rel = 'noopener';
+  document.body.appendChild(mp);
+  mp.click();
+  document.body.removeChild(mp);
 }
 
 // ── WhatsApp cart ──
