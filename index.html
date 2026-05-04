@@ -896,7 +896,7 @@ footer { background:var(--dark2); border-top:1px solid rgba(201,168,76,0.1); pad
         Agregar al Carrito
       </button>
 
-      <button class="modal-buy" id="pm-buy" onclick="buyWithEpayco()">
+      <button class="modal-buy" id="pm-buy" onclick="buyWithMercadopago()">
         <svg width="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
         Comprar
       </button>
@@ -993,11 +993,11 @@ footer { background:var(--dark2); border-top:1px solid rgba(201,168,76,0.1); pad
         <p style="font-size:11px;color:var(--gray);margin-bottom:20px;letter-spacing:1px">Todas las transacciones son seguras y están encriptadas.</p>
 
         <button class="chk-pay-btn" id="chk-pay-btn" onclick="launchEpayco()">
-          Pagar — <span id="chk-total-label">$0</span>
+          Pago Seguro — <span id="chk-total-label">$0</span>
         </button>
         <p class="wompi-badge-text">
           <svg width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Pagos procesados de forma segura por <strong>ePayco</strong>
+          Pagos procesados de forma segura por <strong>Mercado Pago</strong>
         </p>
       </div>
     </div>
@@ -3365,7 +3365,7 @@ function buyWithEpayco() {
 }
 
 // ── Launch Mercado Pago ──
-async function launchEpayco() {
+async function launchMercadopago() {
   const sub = cartTotal();
   const disc = cartDiscount(sub);
   const grand = sub - disc;
@@ -3456,7 +3456,7 @@ async function launchEpayco() {
 
   // Redirigir a Mercado Pago
  const mp = document.createElement('a');
-  mp.href = 'https://secure.payco.co/checkoutopen/77fbb69c-d98d-4399-ac4c-eb5a717c6e56';
+  mp.href = 'https://link.mercadopago.com.co/kronoclock';
   mp.target = '_blank';
   mp.rel = 'noopener';
   document.body.appendChild(mp);
