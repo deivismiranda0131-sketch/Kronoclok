@@ -992,7 +992,7 @@ footer { background:var(--dark2); border-top:1px solid rgba(201,168,76,0.1); pad
         <div class="checkout-block-title">Pago</div>
         <p style="font-size:11px;color:var(--gray);margin-bottom:20px;letter-spacing:1px">Todas las transacciones son seguras y están encriptadas.</p>
 
-        <button class="chk-pay-btn" id="chk-pay-btn" onclick="launchEpayco()">
+        <button class="chk-pay-btn" id="chk-pay-btn" onclick="launchMercadopago()">
           Pago Seguro — <span id="chk-total-label">$0</span>
         </button>
         <p class="wompi-badge-text">
@@ -3357,7 +3357,7 @@ function contactWA() {
 }
 
 // ── Buy directly with Mercado Pago from product modal ──
-function buyWithEpayco() {
+function buyWithMercadopago() {
   // Agregar al carrito y llevar directo al formulario de datos
   addToCartFromModal();
   closeModal();
